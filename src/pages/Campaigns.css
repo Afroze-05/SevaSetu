@@ -1,0 +1,116 @@
+.campaigns-page {
+    min-height: 100vh;
+    background: var(--background-light);
+  }
+  
+  .campaigns-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-blue));
+    color: var(--white);
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .page-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .campaigns-filters {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .search-container {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--text-light);
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid var(--background-light);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+  }
+  
+  .filter-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--text-light);
+  }
+  
+  .filter-select {
+    padding: 15px 20px;
+    border: 2px solid var(--background-light);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-select:focus {
+    outline: none;
+    border-color: var(--primary-green);
+  }
+  
+  .campaigns-grid {
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+  }
+  
+  .no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .page-title {
+      font-size: 2rem;
+    }
+    
+    .campaigns-grid {
+      grid-template-columns: 1fr;
+    }
+  }

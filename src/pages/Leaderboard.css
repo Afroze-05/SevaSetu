@@ -1,0 +1,135 @@
+.leaderboard-page {
+    min-height: 100vh;
+    background: var(--background-light);
+  }
+  
+  .leaderboard-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-blue));
+    color: var(--white);
+  }
+  
+  .header-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    color: #FFD700;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .page-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+  
+  .timeframe-selector {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .timeframe-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: var(--white);
+    border: 2px solid var(--background-light);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-dark);
+  }
+  
+  .timeframe-btn:hover {
+    border-color: var(--primary-green);
+    transform: translateY(-2px);
+  }
+  
+  .timeframe-btn.active {
+    background: var(--primary-green);
+    color: var(--white);
+    border-color: var(--primary-green);
+  }
+  
+  .btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .leaderboard-container {
+    max-width: 1400px;
+    margin: 0 auto 60px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+  }
+  
+  .leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .leaderboard-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .sidebar-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+  }
+  
+  .sidebar-card h3 {
+    color: var(--primary-green);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .sidebar-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  .stat-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--background-light);
+  }
+  
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+  
+  .stat-item span {
+    color: var(--text-light);
+  }
+  
+  .stat-item strong {
+    color: var(--primary-green);
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 1024px) {
+    .leaderboard-container {
+      grid-template-columns: 1fr;
+    }
+  }

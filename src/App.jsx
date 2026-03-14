@@ -14,10 +14,14 @@ import Feedback from "./pages/Feedback";
 import DonorLogin from "./pages/auth/DonorLogin";
 import DonorRegister from "./pages/auth/DonorRegister";
 import AdminLogin from "./pages/auth/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
 
 return (
+<>
+<ScrollToTop />
 
 <Routes>
 
@@ -36,8 +40,10 @@ return (
 <Route path="/donor-login" element={<DonorLogin />} />
 <Route path="/donor-register" element={<DonorRegister />} />
 <Route path="/admin-login" element={<AdminLogin />} />
+<Route path="/admin-dashboard" element={<AdminDashboard />} />
 
 </Routes>
+</>
 
 );
 

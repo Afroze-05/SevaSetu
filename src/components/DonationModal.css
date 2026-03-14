@@ -1,0 +1,96 @@
+.donation-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1200;
+  }
+  
+  .donation-modal {
+    width: 100%;
+    max-width: 520px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px 20px;
+    box-shadow: var(--shadow-hover);
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  .donation-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    border: none;
+    background: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  
+  .donation-modal-title {
+    font-size: 1.5rem;
+    color: var(--primary-green);
+    margin-bottom: 4px;
+  }
+  
+  .donation-modal-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin-bottom: 16px;
+  }
+  
+  .donation-modal-form .form-group {
+    margin-bottom: 14px;
+  }
+  
+  .donation-modal-form label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-dark);
+  }
+  
+  .donation-modal-form .form-input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1.8px solid var(--background-light);
+    font-size: 0.95rem;
+  }
+  
+  .donation-modal-form .form-row {
+    display: flex;
+    gap: 12px;
+  }
+  
+  @media (max-width: 600px) {
+    .donation-modal-form .form-row {
+      flex-direction: column;
+    }
+  
+    .donation-modal {
+      margin: 0 12px;
+      padding: 20px 16px;
+    }
+  }
+  
+  .donation-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+  }
+  
+  .donation-modal-success {
+    text-align: center;
+    padding: 20px 4px;
+  }
+  
+  .donation-modal-success h3 {
+    color: var(--primary-green);
+    margin-bottom: 8px;
+  }

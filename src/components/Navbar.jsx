@@ -1,43 +1,68 @@
-import {Link} from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { Home, Heart, Trophy, Users, Info, Mail, User, LogOut, HandHeart } from "lucide-react";
+import "./Navbar.css";
 
-function Navbar(){
+function Navbar() {
+  const location = useLocation();
 
-return(
+  const isActive = (path) => location.pathname === path;
 
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+  return (
+    <nav className="navbar-custom">
+      <div className="nav-container">
+        <Link to="/home" className="nav-logo">
+          <HandHeart className="logo-icon-nav" />
+          <span className="logo-text">SevaSetu Foundation</span>
+        </Link>
 
-<div className="container">
+        <div className="nav-menu">
+          <Link to="/home" className={`nav-link ${isActive("/home") ? "active" : ""}`}>
+            <Home className="nav-icon" />
+            <span>Home</span>
+          </Link>
+          <Link to="/campaigns" className={`nav-link ${isActive("/campaigns") ? "active" : ""}`}>
+          <HandHeart className="nav-icon" />
+            <span>Campaigns</span>
+          </Link>
+          <Link to="/donations" className={`nav-link ${isActive("/donations") ? "active" : ""}`}>
+            <Heart className="nav-icon" />
+            <span>Donations</span>
+          </Link>
+          <Link to="/leaderboard" className={`nav-link ${isActive("/leaderboard") ? "active" : ""}`}>
+            <Trophy className="nav-icon" />
+            <span>Leaderboard</span>
+          </Link>
+          <Link to="/volunteers" className={`nav-link ${isActive("/volunteers") ? "active" : ""}`}>
+            <Users className="nav-icon" />
+            <span>Volunteers</span>
+          </Link>
+          <Link to="/about" className={`nav-link ${isActive("/about") ? "active" : ""}`}>
+            <Info className="nav-icon" />
+            <span>About</span>
+          </Link>
+          <Link to="/contact" className={`nav-link ${isActive("/contact") ? "active" : ""}`}>
+            <Mail className="nav-icon" />
+            <span>Contact</span>
+          </Link>
+          <Link to="/profile" className={`nav-link profile-link ${isActive("/profile") ? "active" : ""}`}>
+            <User className="nav-icon" />
+            <span>Profile</span>
+          </Link>
+          <Link to="/" className="nav-link logout-link">
+            <LogOut className="nav-icon" />
+            <span>Logout</span>
+          </Link>
+        </div>
 
-<Link className="navbar-brand" to="/home">
-SevaSetu NGO
-</Link>
-
-<div>
-
-<Link className="btn btn-light m-1" to="/campaigns">Campaigns</Link>
-
-<Link className="btn btn-light m-1" to="/donations">Donations</Link>
-
-<Link className="btn btn-light m-1" to="/leaderboard">Leaderboard</Link>
-
-<Link className="btn btn-light m-1" to="/volunteers">Volunteers</Link>
-
-<Link className="btn btn-light m-1" to="/about">About</Link>
-
-<Link className="btn btn-light m-1" to="/contact">Contact</Link>
-
-<Link className="btn btn-warning m-1" to="/profile">Profile</Link>
-
-<Link className="btn btn-danger m-1" to="/">Logout</Link>
-
-</div>
-
-</div>
-
-</nav>
-
-)
-
+        {/* Mobile Menu Toggle */}
+        <button className="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

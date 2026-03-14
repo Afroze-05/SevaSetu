@@ -1,0 +1,237 @@
+.about-page {
+    min-height: 100vh;
+    background: var(--background-light);
+  }
+  
+  .about-hero {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-blue));
+    padding: 100px 20px;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .hero-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    color: var(--white);
+  }
+  
+  .about-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .about-hero p {
+    font-size: 1.5rem;
+    opacity: 0.9;
+  }
+  
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .mission-section {
+    padding: 80px 20px;
+    background: var(--white);
+  }
+  
+  .mission-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .section-icon {
+    width: 60px;
+    height: 60px;
+    color: var(--primary-green);
+    margin: 0 auto 30px;
+  }
+  
+  .mission-content h2 {
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .mission-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+  }
+  
+  .values-section {
+    padding: 80px 20px;
+    background: var(--background-light);
+  }
+  
+  .section-title {
+    text-align: center;
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .value-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .value-icon {
+    width: 60px;
+    height: 60px;
+    color: var(--primary-green);
+    margin: 0 auto 20px;
+  }
+  
+  .value-card h3 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .value-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  .events-section {
+    padding: 80px 20px;
+    background: var(--white);
+  }
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .event-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .event-content {
+    padding: 25px;
+  }
+  
+  .event-content h3 {
+    color: var(--text-dark);
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+  
+  .event-content p {
+    color: var(--text-light);
+    line-height: 1.6;
+  }
+  
+  .team-section {
+    padding: 80px 20px;
+    background: var(--background-light);
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .team-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .team-photo-container {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--primary-green);
+  }
+  
+  .team-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .team-name {
+    color: var(--text-dark);
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .team-role {
+    color: var(--primary-green);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 2.5rem;
+    }
+    
+    .values-grid,
+    .events-grid,
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
