@@ -1,0 +1,238 @@
+.welcome-container {
+    min-height: 100vh;
+    position: relative;
+  }
+  
+  .welcome-hero {
+    height: 100vh;
+    background: linear-gradient(rgba(46, 125, 50, 0.7), rgba(21, 101, 192, 0.7)),
+                url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1920') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+  }
+  
+  .logo-section {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .logo-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    color: var(--white);
+  }
+  
+  .ngo-name {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .tagline {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+  
+  .login-section {
+    padding: 80px 20px;
+    background: var(--background-light);
+  }
+  
+  .login-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-hover);
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .login-card h2 {
+    text-align: center;
+    color: var(--primary-green);
+    margin-bottom: 10px;
+    font-size: 2rem;
+  }
+  
+  .login-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 40px;
+  }
+  
+  .login-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .login-option-card {
+    background: linear-gradient(135deg, var(--primary-green), #1B5E20);
+    color: var(--white);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .login-option-card.admin {
+    background: linear-gradient(135deg, var(--secondary-blue), #0D47A1);
+  }
+  
+  .login-option-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .option-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 20px;
+  }
+  
+  .login-option-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .login-option-card p {
+    opacity: 0.9;
+    font-size: 0.95rem;
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .register-link a {
+    color: var(--primary-green);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .impact-section {
+    padding: 80px 20px;
+    background: var(--white);
+  }
+  
+  .section-title {
+    text-align: center;
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .stat-card {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-blue));
+    color: var(--white);
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  .stat-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  
+  .stat-card h3 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .stat-card p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  .mission-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, var(--background-light), var(--white));
+  }
+  
+  .mission-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .mission-icon {
+    width: 60px;
+    height: 60px;
+    color: var(--accent-orange);
+    margin: 0 auto 30px;
+  }
+  
+  .mission-content h2 {
+    color: var(--primary-green);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+  
+  .mission-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+  }
+  
+  @media (max-width: 768px) {
+    .ngo-name {
+      font-size: 2.5rem;
+    }
+    
+    .tagline {
+      font-size: 1.2rem;
+    }
+    
+    .login-card {
+      padding: 30px 20px;
+    }
+    
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
